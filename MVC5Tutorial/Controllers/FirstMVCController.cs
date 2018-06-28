@@ -11,6 +11,7 @@ namespace MVC5Tutorial.Controllers
         // GET: FirstMVC
         public ActionResult SayHello()
         {
+            ViewData["CurrentTime"] = DateTime.Now.ToString();
             return View("HelloView");
         }
     }
