@@ -17,5 +17,25 @@
     <div>
         Current Time: @ViewData["CurrentTime"];
     </div>
+    <div>
+        @{
+            MVC5Tutorial.Models.Employee emp = (MVC5Tutorial.Models.Employee)
+                ViewBag.Employee;
+        }
+        <b>Employee Details </b><br />
+
+        Employee Name: @emp.FirstName @emp.LastName <br />
+
+        Employee Salary: @emp.Salary.ToString("C")
+
+        @*@{
+            MVC5Tutorial.Models.Employee emp = (MVC5Tutorial.Models.Employee)
+                ViewData["Employee"];
+        }
+
+        <b>Employee Details </b><br />
+        Employee Name : @emp.FirstName @emp.LastName <br />
+        Employee Salary: @emp.Salary.ToString("C")*@
+    </div>
 </body>
 </html>
